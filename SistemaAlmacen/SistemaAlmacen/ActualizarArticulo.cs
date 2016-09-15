@@ -42,7 +42,7 @@ namespace SistemaAlmacen
                 txtDescripcion.Text = sdr.GetValue(2).ToString();
                 txtUnidad.Text = sdr.GetValue(3).ToString();
                 txtTipo.Text = sdr.GetValue(4).ToString();
-                txtPrecioUnitario.Text = sdr.GetValue(5).ToString();
+                txtId_Grupo.Text = sdr.GetValue(5).ToString();
                 dtpFechaEntrada.Text = sdr.GetValue(6).ToString();
                 dtpFechaSalida.Text = sdr.GetValue(7).ToString();
                 txtCantidad.Text = sdr.GetValue(8).ToString();
