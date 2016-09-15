@@ -13,25 +13,26 @@ namespace SistemaAlmacen
         [STAThread]
         static void Main()
         {
+            //Se defie la ruta que tendra el archivo txt de configuración
             String direccion = "C:\\SAC\\";
             String nombrearchivo = "SAConfig.txt";
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Articulos());
 
+            //Si el archivo txt ya existe entra en el if
             if (System.IO.File.Exists(direccion + nombrearchivo))
             {
-                //this.Close();
+                //Se declara una variable de la clase conexión y se instancia, y se manda llamar al método configurar
                 Conexion c = new Conexion();
                 c.Configurar();
                 Application.Run(new Login(c));
-                //loggito.Show();
             }
+            
+            // Si no existe el archivo txt se crea el directorio
             else
             {
-                System.IO.Directory.CreateDirectory("C:\\SAC");
-                // crear directorio 
+                System.IO.Directory.CreateDirectory("C:\\SAC"); 
                 Application.Run(new Configuracion());
             }
         }

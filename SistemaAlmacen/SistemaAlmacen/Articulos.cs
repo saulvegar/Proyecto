@@ -23,6 +23,8 @@ namespace SistemaAlmacen
 
         private void Artículos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'almacenArticulos.Articulo' Puede moverla o quitarla según sea necesario.
+            this.articuloTableAdapter.Fill(this.almacenArticulos.Articulo);
             // TODO: esta línea de código carga datos en la tabla 'almacenArticulos.Articulos' Puede moverla o quitarla según sea necesario.
             //this.articulosTableAdapter.Fill(this.almacenArticulos.Articulos);
             c.cargarDatos(dgvArticulos, sqlString, tableName);

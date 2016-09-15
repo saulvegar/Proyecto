@@ -26,10 +26,14 @@ namespace SistemaAlmacen
             cone.Configurar();
             cone.Conectar();
 
-            SqlCommand query = cone.conex.CreateCommand();
-            String consulta = String.Format("execute ListarArticuloPorId {0};", id);
-            query.CommandText = consulta;
-            SqlDataReader sdr = query.ExecuteReader();
+            //SqlCommand query = cone.conex.CreateCommand();
+            //String consulta = String.Format("execute ListarArticuloPorId {0};", id);
+            //query.CommandText = consulta;
+
+            SqlCommand proc = new SqlCommand("ListarArticuloPorId", cone.conex);
+            proc.CommandType = CommandType.StoredProcedure;
+            proc.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            SqlDataReader sdr = proc.ExecuteReader();
 
             while (sdr.Read())
             {
@@ -39,11 +43,8 @@ namespace SistemaAlmacen
                 txtUnidad.Text = sdr.GetValue(3).ToString();
                 txtTipo.Text = sdr.GetValue(4).ToString();
                 txtPrecioUnitario.Text = sdr.GetValue(5).ToString();
-                //DateTime f_entrada = DateTime.Parse(sdr.GetValue(6).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                //DateTime f_salida = DateTime.Parse(sdr.GetValue(7).ToString(), System.Globalization.CultureInfo.InvariantCulture);
                 dtpFechaEntrada.Text = sdr.GetValue(6).ToString();
                 dtpFechaSalida.Text = sdr.GetValue(7).ToString();
-                
                 txtCantidad.Text = sdr.GetValue(8).ToString();
                 txtExistencia.Text = sdr.GetValue(9).ToString();
                 txtPrecioProducto.Text = sdr.GetValue(10).ToString();

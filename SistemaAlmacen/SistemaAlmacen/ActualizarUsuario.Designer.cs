@@ -226,6 +226,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ActualizarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar usuario";
             this.Load += new System.EventHandler(this.ActualizarUsuario_Load);
             this.groupBox1.ResumeLayout(false);
