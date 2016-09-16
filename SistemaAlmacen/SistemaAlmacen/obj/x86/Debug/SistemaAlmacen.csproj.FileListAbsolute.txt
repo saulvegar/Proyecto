@@ -48,3 +48,6 @@ C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Properties.Resources.resources
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Usuarios.resources
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.csproj.GenerateResource.Cache
+C:\Users\AdRyAn\Desktop\Practicas\Proyecto\SistemaAlmacen\SistemaAlmacen\bin\Debug\SistemaAlmacen.exe.config
+C:\Users\AdRyAn\Desktop\Practicas\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.exe
+C:\Users\AdRyAn\Desktop\Practicas\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.pdb
