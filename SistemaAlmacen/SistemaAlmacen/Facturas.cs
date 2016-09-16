@@ -15,5 +15,16 @@ namespace SistemaAlmacen
         {
             InitializeComponent();
         }
+
+        private void btnNueva_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(btnNueva, "Agregar nueva factura");
+        }
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            NuevaFactura nf = new NuevaFactura();
+            nf.Show();
+        }
     }
 }
