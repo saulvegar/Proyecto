@@ -7,5 +7,21 @@ namespace SistemaAlmacen
 {
     class Factura
     {
+        int id_factura;
+        
+
+
+
+
+        public void InsetarFactura()
+        {
+        }
+
+        public void ActualizarFactura()
+        {
+        }
+
+
+
     }
 }
