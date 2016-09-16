@@ -72,3 +72,4 @@ C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\Siste
 C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.csproj.GenerateResource.Cache
 C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Seleccionar.resources
 >>>>>>> 9a085e4a5234e64daa434e6c3b0c7cec67efec90
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Facturas.resources
