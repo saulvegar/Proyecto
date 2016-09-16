@@ -32,7 +32,7 @@ namespace SistemaAlmacen
             //int id_local = int.Parse(txtIdLocal.Text.ToString().Trim());
 
             Articulo a = new Articulo();
-            //a.InsertarArticulo(id, nombre, descripcion, unidad, id_local);
+            a.InsertarArticulo(id_grupo, nombre, descripcion, unidad);
             this.Hide();
         }
 
