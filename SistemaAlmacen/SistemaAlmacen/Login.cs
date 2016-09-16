@@ -50,36 +50,7 @@ namespace SistemaAlmacen
             String nombreUsuario = cbUser.SelectedItem.ToString();
             String contraseña = txtContraseña.Text.Trim();
 
-            //String user="", pass="";
-
-            //SqlDataReader reader;// reader2;
-            
-            //Se conecta al servidor
-            //conexion.Conectar();
-            
-            //Obtiene el usuario y la contraseña en la tabla de usuarios
-            //SqlCommand query = conexion.conex.CreateCommand();
-            //String consulta = String.Format("select usuario, contraseña from Usuario where usuario='{0}';", nombreUsuario);
-            //query.CommandText=consulta;
-
-           
-            ////Obtiene el campo contraseña en la tabla de usuario
-            //SqlCommand query2 = conexion.conex.CreateCommand();
-            //String consulta2 = String.Format("select contraseña from Usuario where contraseña='{0}'", contraseña);
-            //query2.CommandText = consulta2;
-
             try{
-                //reader = query.ExecuteReader();
-                ////user= Convert.ToString(reader[0]);
-                //reader.Read();
-                //user = reader.GetString(0);
-                //pass = reader.GetString(1);
-                //reader.Close();
-
-                //reader2 = query2.ExecuteReader();
-                //reader2.Read();
-                //pass = reader2.GetString(0);
-                //reader2.Close();
 
                 //si el usuario y la contraseña son correctos muestra la patalla principal
                 if (Autentificar(nombreUsuario, contraseña) > 0)
@@ -111,6 +82,7 @@ namespace SistemaAlmacen
             txtContraseña.Clear();
         }
 
+        //este método comprueba si el usuario existe en la tabla y si la contraseña ingresada es correcta
         public int Autentificar(String usuario, String contraseña)
         {
             int resultado = -1;

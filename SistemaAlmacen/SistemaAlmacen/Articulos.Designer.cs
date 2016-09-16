@@ -40,21 +40,15 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnExportar = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.articulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idArticuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idGrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cortemesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.almacenArticulos = new SistemaAlmacen.almacenArticulos();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,12 +56,12 @@
             this.darDeBajaArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.articulosTableAdapter = new SistemaAlmacen.almacenArticulosTableAdapters.ArticulosTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.articuloTableAdapter = new SistemaAlmacen.almacenArticulosTableAdapters.ArticuloTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articulosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.almacenArticulos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +70,7 @@
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.btnEditar);
@@ -88,17 +83,17 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(978, 394);
+            this.groupBox1.Size = new System.Drawing.Size(876, 394);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lista de artículos:";
+            this.groupBox1.Text = "Catálogo de artículos:";
             // 
             // btnRefresh
             // 
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(698, 41);
+            this.btnRefresh.Location = new System.Drawing.Point(599, 41);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(24, 25);
             this.btnRefresh.TabIndex = 9;
@@ -107,7 +102,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.SystemColors.Control;
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -170,7 +165,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(728, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(629, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +174,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(756, 43);
+            this.txtBuscar.Location = new System.Drawing.Point(657, 43);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(199, 24);
             this.txtBuscar.TabIndex = 3;
@@ -193,7 +188,7 @@
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.Image = ((System.Drawing.Image)(resources.GetObject("btnExportar.Image")));
-            this.btnExportar.Location = new System.Drawing.Point(163, 29);
+            this.btnExportar.Location = new System.Drawing.Point(61, 29);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(37, 37);
             this.btnExportar.TabIndex = 2;
@@ -210,117 +205,83 @@
             this.dgvArticulos.AutoGenerateColumns = false;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.dgvArticulos.DataSource = this.articulosBindingSource;
+            this.idArticuloDataGridViewTextBoxColumn,
+            this.idGrupoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.unidadDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.estatusDataGridViewTextBoxColumn,
+            this.cortemesDataGridViewTextBoxColumn});
+            this.dgvArticulos.DataSource = this.articuloBindingSource;
             this.dgvArticulos.Location = new System.Drawing.Point(12, 73);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(943, 298);
+            this.dgvArticulos.Size = new System.Drawing.Size(844, 298);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // dataGridViewTextBoxColumn1
+            // idArticuloDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.idArticuloDataGridViewTextBoxColumn.DataPropertyName = "Id_Articulo";
+            this.idArticuloDataGridViewTextBoxColumn.HeaderText = "Id_Articulo";
+            this.idArticuloDataGridViewTextBoxColumn.Name = "idArticuloDataGridViewTextBoxColumn";
+            this.idArticuloDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // idGrupoDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.idGrupoDataGridViewTextBoxColumn.DataPropertyName = "Id_Grupo";
+            this.idGrupoDataGridViewTextBoxColumn.HeaderText = "Id_Grupo";
+            this.idGrupoDataGridViewTextBoxColumn.Name = "idGrupoDataGridViewTextBoxColumn";
+            this.idGrupoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // descripcionDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Unidad";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Unidad";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // unidadDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Tipo";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.unidadDataGridViewTextBoxColumn.DataPropertyName = "Unidad";
+            this.unidadDataGridViewTextBoxColumn.HeaderText = "Unidad";
+            this.unidadDataGridViewTextBoxColumn.Name = "unidadDataGridViewTextBoxColumn";
+            this.unidadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // cantidadDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Precio_uni";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Precio_uni";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn7
+            // estatusDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "F_entrada";
-            this.dataGridViewTextBoxColumn7.HeaderText = "F_entrada";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.estatusDataGridViewTextBoxColumn.DataPropertyName = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.HeaderText = "Estatus";
+            this.estatusDataGridViewTextBoxColumn.Name = "estatusDataGridViewTextBoxColumn";
+            this.estatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn8
+            // cortemesDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "F_salida";
-            this.dataGridViewTextBoxColumn8.HeaderText = "F_salida";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.cortemesDataGridViewTextBoxColumn.DataPropertyName = "Corte_mes";
+            this.cortemesDataGridViewTextBoxColumn.HeaderText = "Corte_mes";
+            this.cortemesDataGridViewTextBoxColumn.Name = "cortemesDataGridViewTextBoxColumn";
+            this.cortemesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn9
+            // articuloBindingSource
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Cantidad";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Existencia";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Existencia";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Precio_prod";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Precio_prod";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Estatus";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Estatus";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Corte_mes";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Corte_mes";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Id_local";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Id_local";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // articulosBindingSource
-            // 
-            this.articulosBindingSource.DataMember = "Articulos";
-            this.articulosBindingSource.DataSource = this.almacenArticulos;
+            this.articuloBindingSource.DataMember = "Articulo";
+            this.articuloBindingSource.DataSource = this.almacenArticulos;
             // 
             // almacenArticulos
             // 
@@ -333,7 +294,7 @@
             this.accionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(914, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -379,9 +340,9 @@
             this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
-            // articulosTableAdapter
+            // articuloTableAdapter
             // 
-            this.articulosTableAdapter.ClearBeforeFill = true;
+            this.articuloTableAdapter.ClearBeforeFill = true;
             // 
             // Articulos
             // 
@@ -389,7 +350,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1006, 448);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(914, 448);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -401,7 +363,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articulosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.almacenArticulos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -421,23 +383,6 @@
         private System.Windows.Forms.ToolStripMenuItem actualizarArticuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
         private System.Windows.Forms.Button btnExportar;
-        private almacenArticulos almacenArticulos;
-        private System.Windows.Forms.BindingSource articulosBindingSource;
-        private almacenArticulosTableAdapters.ArticulosTableAdapter articulosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnAñadir;
@@ -446,6 +391,17 @@
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnRefresh;
+        private almacenArticulos almacenArticulos;
+        private System.Windows.Forms.BindingSource articuloBindingSource;
+        private almacenArticulosTableAdapters.ArticuloTableAdapter articuloTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idArticuloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idGrupoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cortemesDataGridViewTextBoxColumn;
 
     }
 }

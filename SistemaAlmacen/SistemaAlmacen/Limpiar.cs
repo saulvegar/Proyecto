@@ -20,6 +20,8 @@ namespace SistemaAlmacen
         //        }
         //    }
         //}
+
+        //este metodo borra todos los campos de un formulario siempre y cuando todos sean de tipo textbox
         public static void Vaciar(TextBox[] arreglo)
         {
             foreach (TextBox t in arreglo)
@@ -28,6 +30,7 @@ namespace SistemaAlmacen
             }
         }
 
+        
         public static List<T> ObtenerControles<T>(this Control container) where T : Control
         {
          List<T> controls = new List<T>();

@@ -11,35 +11,52 @@ namespace SistemaAlmacen
 {
     public partial class NuevoArticulo : Form
     {
+        int id_grupo;
+
         public NuevoArticulo()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        public NuevoArticulo(int Id_Grupo)
         {
-
+            InitializeComponent();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtId.Text.ToString().Trim());
+            int id_grupo = int.Parse(txtIdGrupo.Text.ToString().Trim());
             String nombre = txtNombre.Text.ToString().Trim();
             String descripcion = txtDescripcion.Text.ToString().Trim(); ;
-            String unidad = txtUnidad.Text.ToString().Trim();
-            String tipo = txtUnidad.Text.ToString().Trim();
-            int precio_uni = int.Parse(txtPrecioUnitario.Text.ToString().Trim());
-            //DateTime f_entrada = dtpFechaEntrada.Value.Date;
-            //DateTime f_salida = dtpFechaSalida.Value.Date;
-            String f_entrada = dtpFechaEntrada.Value.Day + "/" + dtpFechaEntrada.Value.Month + "/" + dtpFechaEntrada.Value.Year;
-            String f_salida = dtpFechaSalida.Value.Day + "/" + dtpFechaSalida.Value.Month + "/" + dtpFechaSalida.Value.Year;
-            int cantidad = int.Parse(txtCantidad.Text.ToString().Trim());
-            int existencia = int.Parse(txtExistencia.Text.ToString().Trim());
-            int precio_prod = int.Parse(txtPrecioProducto.Text.ToString().Trim());
-            int id_local = int.Parse(txtIdLocal.Text.ToString().Trim());
+            String unidad = cbUnidad.Text.ToString().Trim();
+            //int id_local = int.Parse(txtIdLocal.Text.ToString().Trim());
 
             Articulo a = new Articulo();
-            a.InsertarArticulo(id, nombre, descripcion, unidad, tipo, precio_uni, f_entrada, f_salida, cantidad, existencia, precio_prod, id_local);
+            a.InsertarArticulo(id_grupo, nombre, descripcion, unidad);
+            this.Hide();
+        }
+
+        private void txtIdGrupo_Click(object sender, EventArgs e)
+        {
+            String sql = "select * from Grupo;";
+            String tituloForm = "Catálogo de grupos";
+            String textLabel = "Seleccione un grupo:";
+            Seleccionar s = new Seleccionar(sql, "Grupo", textLabel);
+            s.Text = tituloForm;
+
+            DialogResult res = s.ShowDialog();
+
+            if (res == DialogResult.OK)
+            {
+                txtIdGrupo.Text = s.id.ToString();
+            }
+            //s.Show();
+
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             this.Hide();
         }
     }

@@ -12,11 +12,11 @@ namespace SistemaAlmacen
 {
     public partial class ActualizarArticulo : Form
     {
-        int id;
+        int id_articulo;
 
-        public ActualizarArticulo(int Id)
+        public ActualizarArticulo(int Id_Articulo)
         {
-            this.id = Id;
+            this.id_articulo = Id_Articulo;
             InitializeComponent();
         }
 
@@ -26,40 +26,62 @@ namespace SistemaAlmacen
             cone.Configurar();
             cone.Conectar();
 
-            SqlCommand query = cone.conex.CreateCommand();
-            String consulta = String.Format("execute ListarArticuloPorId {0};", id);
-            query.CommandText = consulta;
-            SqlDataReader sdr = query.ExecuteReader();
+            SqlCommand proc = new SqlCommand("ListarArticuloPorId", cone.conex);
+            proc.CommandType = CommandType.StoredProcedure;
+            proc.Parameters.Add("@id_articulo", SqlDbType.Int).Value = id_articulo;
+            SqlDataReader sdr = proc.ExecuteReader();
 
             while (sdr.Read())
             {
-                txtId.Text = sdr.GetValue(0).ToString();
-                txtNombre.Text = sdr.GetValue(1).ToString();
-                txtDescripcion.Text = sdr.GetValue(2).ToString();
-                txtUnidad.Text = sdr.GetValue(3).ToString();
-                txtTipo.Text = sdr.GetValue(4).ToString();
-                txtPrecioUnitario.Text = sdr.GetValue(5).ToString();
-                //DateTime f_entrada = DateTime.Parse(sdr.GetValue(6).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                //DateTime f_salida = DateTime.Parse(sdr.GetValue(7).ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                dtpFechaEntrada.Text = sdr.GetValue(6).ToString();
-                dtpFechaSalida.Text = sdr.GetValue(7).ToString();
-                
-                txtCantidad.Text = sdr.GetValue(8).ToString();
-                txtExistencia.Text = sdr.GetValue(9).ToString();
-                txtPrecioProducto.Text = sdr.GetValue(10).ToString();
-                txtIdLocal.Text = sdr.GetValue(13).ToString();
+                txtId_Articulo.Text = sdr.GetValue(0).ToString();
+                txtNombre.Text = sdr.GetValue(2).ToString();
+                txtDescripcion.Text = sdr.GetValue(3).ToString();
+                cbUnidad.Text = sdr.GetValue(4).ToString();
+                txtId_Grupo.Text = sdr.GetValue(1).ToString();
+                txtCantidad.Text = sdr.GetValue(5).ToString();
 
-                if(sdr.GetValue(11).ToString().Trim().Equals("a"))
+                if(sdr.GetValue(6).ToString().Trim().Equals("a"))
                 {
                     rbActivo.Checked = true;
                 }
-                if(sdr.GetValue(11).ToString().Trim().Equals("b"))
+                if(sdr.GetValue(6).ToString().Trim().Equals("b"))
                 {
                     rbInactivo.Checked = true;
                 }
             }
             sdr.Close();
             cone.Cerrar();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            String nombre = txtNombre.Text.Trim();
+            String descripcion = txtDescripcion.Text.Trim();
+            String unidad = cbUnidad.Text.Trim();
+            int cantidad = int.Parse(txtCantidad.Text.Trim());
+            char estatus = '\0';
+
+            if(rbActivo.Checked)
+            {
+                estatus = 'a';
+            }
+            if(rbInactivo.Checked)
+            {
+                estatus = 'b';
+            }
+
+            Articulo a = new Articulo();
+            a.ActualizarArticulo(id_articulo, nombre, descripcion, unidad, cantidad, estatus);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

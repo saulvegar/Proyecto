@@ -48,6 +48,27 @@ C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Properties.Resources.resources
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Usuarios.resources
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\AdRyAn\Desktop\Practicas\Proyecto\SistemaAlmacen\SistemaAlmacen\bin\Debug\SistemaAlmacen.exe.config
 C:\Users\AdRyAn\Desktop\Practicas\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.exe
 C:\Users\AdRyAn\Desktop\Practicas\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.pdb
+=======
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\bin\Debug\SistemaAlmacen.exe.config
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.exe
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.pdb
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\bin\Debug\SistemaAlmacen.exe
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\bin\Debug\SistemaAlmacen.pdb
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.csprojResolveAssemblyReference.cache
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.ActualizarArticulo.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.ActualizarUsuario.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Articulos.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Configuracion.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Login.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.NuevoArticulo.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.NuevoUsuario.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Principal.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Properties.Resources.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Usuarios.resources
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.csproj.GenerateResource.Cache
+C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Seleccionar.resources
+>>>>>>> 9a085e4a5234e64daa434e6c3b0c7cec67efec90

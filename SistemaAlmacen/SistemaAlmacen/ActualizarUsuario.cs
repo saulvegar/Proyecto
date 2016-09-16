@@ -22,7 +22,7 @@ namespace SistemaAlmacen
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void ActualizarUsuario_Load(object sender, EventArgs e)
@@ -32,16 +32,16 @@ namespace SistemaAlmacen
 
             while (r.Read())
             {
-                txtUsuario.Text = r.GetValue(0).ToString();
-                txtContrasena.Text = r.GetValue(1).ToString();
-                txtDepartamento.Text = r.GetValue(2).ToString();
-                txtCargo.Text = r.GetValue(3).ToString();
+                txtUsuario.Text = r.GetValue(1).ToString();
+                txtContrasena.Text = r.GetValue(2).ToString();
+                txtDepartamento.Text = r.GetValue(3).ToString();
+                txtCargo.Text = r.GetValue(4).ToString();
 
-                if (r.GetValue(4).ToString().Equals("a"))
+                if (r.GetValue(5).ToString().Equals("a"))
                 {
                     rbActivo.Checked = true;
                 }
-                if (r.GetValue(4).ToString().Equals("b"))
+                if (r.GetValue(5).ToString().Equals("b"))
                 {
                     rbInactivo.Checked = true;
                 }

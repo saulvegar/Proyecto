@@ -7,22 +7,25 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data;
 using System.Threading;
-//using ExcelLibrary.CompoundDocumentFormat;
 
 namespace SistemaAlmacen
 {
     public class Conexion
     {
+        //Se declara un atributo de la clase de tipo sqlconnection con el cual se hara el enlace con la base de datos
+        //Asi como las variables que necesita para conectarse
         public SqlConnection conex;
         String servidor = "";
         String baseDatos = "";
         String usuario = "";
         String contrasena = "";
 
+        //Este es el constructor de la clase
         public Conexion()
         {
         }
 
+        //Este mtodo retorno el objeto conex de tipo sqlConection
         public SqlConnection Conex
         {
             get
@@ -31,13 +34,18 @@ namespace SistemaAlmacen
             }
         }
 
+        //Este metodo lee el archivo txt de configuración y setea la variables de la clase con los valores de las líneas del txt
         public void Configurar()
         {
             //ruta del archivo config que contiene los datos de conexion a bd
             StreamReader objReader = new StreamReader("C:\\SAC\\SAConfig.txt");
 
+            //se define una variable de tipo string inicializada en vacio
             String sLine = "";
+            //se define una lista
             List<String> arrText = new List<String>();
+            
+            //en este ciclo lee las lineas que tenga el txt mientras el numero de lineas se mayor que cero
             do
             {
                 sLine = objReader.ReadLine();
@@ -57,14 +65,19 @@ namespace SistemaAlmacen
             contrasena = arrText.ElementAt(3);
         }
 
+        //este metodo conecta a la base de datos
         public void Conectar()
         {
             try
             {
+                /*la variable de clase conex se instancia con los parametros del txt para hacer la conexion 
+                 * y el metodo open de esta variable es el que abre la conexion*/ 
                 conex = new SqlConnection("Data Source=" + servidor + "; Database=" + baseDatos + ";User ID="+usuario+";Password="+contrasena);
                 conex.Open();
                 
             }
+
+            //si no es posible aer la conexion o algo sale mal arroja un mensaje a la pantalla diciendo que no se pudo conectar
             catch (SqlException e)
             {
                 MessageBoxButtons tipoBoton = MessageBoxButtons.OK;
@@ -73,12 +86,15 @@ namespace SistemaAlmacen
             }
         }
 
+        //cierra la conexion mediante el metodo close de la variable conex
         public void Cerrar()
         {
             conex.Close();
             conex.Dispose();
         }
 
+        /*este metodo generico llena cualquier datagrid no importa en que formulario se encuentre con 
+         * los datos de a consulta a la tabla que se le pasen*/
         public void cargarDatos(DataGridView dgv, String sql, String table)
         {
             Configurar();
