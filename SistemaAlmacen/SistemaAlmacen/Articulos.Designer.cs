@@ -40,16 +40,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnExportar = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.accionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.darDeBajaArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.almacenArticulos = new SistemaAlmacen.almacenArticulos();
-            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.articuloTableAdapter = new SistemaAlmacen.almacenArticulosTableAdapters.ArticuloTableAdapter();
             this.idArticuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idGrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,18 +48,29 @@
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cortemesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.almacenArticulos = new SistemaAlmacen.almacenArticulos();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.accionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.darDeBajaArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.articuloTableAdapter = new SistemaAlmacen.almacenArticulosTableAdapters.ArticuloTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.almacenArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.almacenArticulos)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.btnEditar);
@@ -85,7 +86,7 @@
             this.groupBox1.Size = new System.Drawing.Size(876, 394);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lista de artículos:";
+            this.groupBox1.Text = "Catálogo de artículos:";
             // 
             // btnRefresh
             // 
@@ -101,7 +102,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.SystemColors.Control;
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -221,72 +222,6 @@
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.accionesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(914, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // accionesToolStripMenuItem
-            // 
-            this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoArticuloToolStripMenuItem,
-            this.darDeBajaArticuloToolStripMenuItem,
-            this.actualizarArticuloToolStripMenuItem,
-            this.imprimirToolStripMenuItem});
-            this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
-            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.accionesToolStripMenuItem.Text = "Acciones";
-            // 
-            // nuevoArticuloToolStripMenuItem
-            // 
-            this.nuevoArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoArticuloToolStripMenuItem.Image")));
-            this.nuevoArticuloToolStripMenuItem.Name = "nuevoArticuloToolStripMenuItem";
-            this.nuevoArticuloToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.nuevoArticuloToolStripMenuItem.Text = "Nuevo articulo";
-            this.nuevoArticuloToolStripMenuItem.Click += new System.EventHandler(this.nuevoArticuloToolStripMenuItem_Click);
-            // 
-            // darDeBajaArticuloToolStripMenuItem
-            // 
-            this.darDeBajaArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("darDeBajaArticuloToolStripMenuItem.Image")));
-            this.darDeBajaArticuloToolStripMenuItem.Name = "darDeBajaArticuloToolStripMenuItem";
-            this.darDeBajaArticuloToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.darDeBajaArticuloToolStripMenuItem.Text = "Dar de baja articulo";
-            this.darDeBajaArticuloToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaArticuloToolStripMenuItem_Click);
-            // 
-            // actualizarArticuloToolStripMenuItem
-            // 
-            this.actualizarArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("actualizarArticuloToolStripMenuItem.Image")));
-            this.actualizarArticuloToolStripMenuItem.Name = "actualizarArticuloToolStripMenuItem";
-            this.actualizarArticuloToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.actualizarArticuloToolStripMenuItem.Text = "Editar articulo";
-            this.actualizarArticuloToolStripMenuItem.Click += new System.EventHandler(this.actualizarArticuloToolStripMenuItem_Click);
-            // 
-            // imprimirToolStripMenuItem
-            // 
-            this.imprimirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("imprimirToolStripMenuItem.Image")));
-            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.imprimirToolStripMenuItem.Text = "Imprimir";
-            // 
-            // almacenArticulos
-            // 
-            this.almacenArticulos.DataSetName = "almacenArticulos";
-            this.almacenArticulos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // articuloBindingSource
-            // 
-            this.articuloBindingSource.DataMember = "Articulo";
-            this.articuloBindingSource.DataSource = this.almacenArticulos;
-            // 
-            // articuloTableAdapter
-            // 
-            this.articuloTableAdapter.ClearBeforeFill = true;
-            // 
             // idArticuloDataGridViewTextBoxColumn
             // 
             this.idArticuloDataGridViewTextBoxColumn.DataPropertyName = "Id_Articulo";
@@ -343,12 +278,79 @@
             this.cortemesDataGridViewTextBoxColumn.Name = "cortemesDataGridViewTextBoxColumn";
             this.cortemesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // articuloBindingSource
+            // 
+            this.articuloBindingSource.DataMember = "Articulo";
+            this.articuloBindingSource.DataSource = this.almacenArticulos;
+            // 
+            // almacenArticulos
+            // 
+            this.almacenArticulos.DataSetName = "almacenArticulos";
+            this.almacenArticulos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.accionesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(914, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // accionesToolStripMenuItem
+            // 
+            this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoArticuloToolStripMenuItem,
+            this.darDeBajaArticuloToolStripMenuItem,
+            this.actualizarArticuloToolStripMenuItem,
+            this.imprimirToolStripMenuItem});
+            this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
+            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.accionesToolStripMenuItem.Text = "Acciones";
+            // 
+            // nuevoArticuloToolStripMenuItem
+            // 
+            this.nuevoArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoArticuloToolStripMenuItem.Image")));
+            this.nuevoArticuloToolStripMenuItem.Name = "nuevoArticuloToolStripMenuItem";
+            this.nuevoArticuloToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.nuevoArticuloToolStripMenuItem.Text = "Nuevo articulo";
+            this.nuevoArticuloToolStripMenuItem.Click += new System.EventHandler(this.nuevoArticuloToolStripMenuItem_Click);
+            // 
+            // darDeBajaArticuloToolStripMenuItem
+            // 
+            this.darDeBajaArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("darDeBajaArticuloToolStripMenuItem.Image")));
+            this.darDeBajaArticuloToolStripMenuItem.Name = "darDeBajaArticuloToolStripMenuItem";
+            this.darDeBajaArticuloToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.darDeBajaArticuloToolStripMenuItem.Text = "Dar de baja articulo";
+            this.darDeBajaArticuloToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaArticuloToolStripMenuItem_Click);
+            // 
+            // actualizarArticuloToolStripMenuItem
+            // 
+            this.actualizarArticuloToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("actualizarArticuloToolStripMenuItem.Image")));
+            this.actualizarArticuloToolStripMenuItem.Name = "actualizarArticuloToolStripMenuItem";
+            this.actualizarArticuloToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.actualizarArticuloToolStripMenuItem.Text = "Editar articulo";
+            this.actualizarArticuloToolStripMenuItem.Click += new System.EventHandler(this.actualizarArticuloToolStripMenuItem_Click);
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("imprimirToolStripMenuItem.Image")));
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
+            // 
+            // articuloTableAdapter
+            // 
+            this.articuloTableAdapter.ClearBeforeFill = true;
+            // 
             // Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(914, 448);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -361,10 +363,10 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.almacenArticulos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.almacenArticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

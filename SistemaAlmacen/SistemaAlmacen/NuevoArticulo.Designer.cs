@@ -60,14 +60,14 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(25, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 405);
+            this.groupBox1.Size = new System.Drawing.Size(403, 198);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registre los siguientes datos:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbUnidad
             // 
+            this.cbUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUnidad.FormattingEnabled = true;
             this.cbUnidad.Items.AddRange(new object[] {
             "Pieza",
@@ -78,6 +78,7 @@
             this.cbUnidad.Name = "cbUnidad";
             this.cbUnidad.Size = new System.Drawing.Size(200, 26);
             this.cbUnidad.TabIndex = 26;
+            this.cbUnidad.Text = "Seleccionar";
             // 
             // txtDescripcion
             // 
@@ -149,7 +150,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(452, 334);
+            this.btnAgregar.Location = new System.Drawing.Point(203, 228);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(111, 40);
             this.btnAgregar.TabIndex = 1;
@@ -163,13 +164,14 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::SistemaAlmacen.Properties.Resources.cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(581, 334);
+            this.btnCancelar.Location = new System.Drawing.Point(332, 228);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(111, 40);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureBox1
             // 
@@ -177,7 +179,8 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(443, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 260);
+            this.pictureBox1.Size = new System.Drawing.Size(195, 198);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -187,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::SistemaAlmacen.Properties.Resources.fondoLogin;
-            this.ClientSize = new System.Drawing.Size(724, 436);
+            this.ClientSize = new System.Drawing.Size(653, 284);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);

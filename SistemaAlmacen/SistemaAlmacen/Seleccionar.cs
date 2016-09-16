@@ -14,16 +14,32 @@ namespace SistemaAlmacen
         Conexion c = new Conexion();
         String sql;
         String table;
+        String textLabel;
+        public int id;
 
-        public Seleccionar(String Sql, String Table)
+        public Seleccionar(String Sql, String Table, String TextLabel)
         {
             this.sql = Sql;
+            this.table = Table;
+            this.textLabel = TextLabel;
             InitializeComponent();
         }
 
         private void Seleccionar_Load(object sender, EventArgs e)
         {
+            lblTexto.Text = textLabel;
             c.cargarDatos(dgvSeleccionar, sql, table);
+            
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            id = int.Parse(dgvSeleccionar.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
