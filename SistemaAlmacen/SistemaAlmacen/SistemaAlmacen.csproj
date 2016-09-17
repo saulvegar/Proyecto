@@ -62,6 +62,24 @@
     <Compile Include="ActualizarArticulo.Designer.cs">
       <DependentUpon>ActualizarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActualizarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarDepartamento.Designer.cs">
+      <DependentUpon>ActualizarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarFactura.Designer.cs">
+      <DependentUpon>ActualizarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarGrupo.Designer.cs">
+      <DependentUpon>ActualizarGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +115,12 @@
     <Compile Include="Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departamentos.Designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factura.cs" />
     <Compile Include="Facturas.cs">
       <SubType>Form</SubType>
@@ -104,7 +128,19 @@
     <Compile Include="Facturas.Designer.cs">
       <DependentUpon>Facturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupos.Designer.cs">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Limpiar.cs" />
+    <Compile Include="Localizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localizaciones.Designer.cs">
+      <DependentUpon>Localizaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +153,29 @@
     <Compile Include="NuevaFactura.Designer.cs">
       <DependentUpon>NuevaFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevaLocalizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaLocalizacion.Designer.cs">
+      <DependentUpon>NuevaLocalizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NuevoArticulo.Designer.cs">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoDepartamento.Designer.cs">
+      <DependentUpon>NuevoDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoGrupo.Designer.cs">
+      <DependentUpon>NuevoGrupo.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -159,6 +213,15 @@
     <EmbeddedResource Include="ActualizarArticulo.resx">
       <DependentUpon>ActualizarArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActualizarDepartamento.resx">
+      <DependentUpon>ActualizarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActualizarFactura.resx">
+      <DependentUpon>ActualizarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActualizarGrupo.resx">
+      <DependentUpon>ActualizarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActualizarUsuario.resx">
       <DependentUpon>ActualizarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoArticulo.resx">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoDepartamento.resx">
+      <DependentUpon>NuevoDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoGrupo.resx">
+      <DependentUpon>NuevoGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>

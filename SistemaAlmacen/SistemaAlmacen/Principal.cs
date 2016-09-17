@@ -44,18 +44,19 @@ namespace SistemaAlmacen
         private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Articulos a = new Articulos();
-            //this.Hide();
             a.Show();
         }
 
-        private void sistemasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void localizacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Localizaciones l = new Localizaciones();
+            l.Show();
         }
 
-        private void almacénToolStripMenuItem_Click(object sender, EventArgs e)
+        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Departamentos d = new Departamentos();
+            d.Show();
         }
     }
 }
