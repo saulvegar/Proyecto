@@ -62,6 +62,7 @@ namespace SistemaAlmacen
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            String numFactura = tbNumFactura.Text.Trim();
             int id_proveedor = int.Parse(tbIdProveedor.Text.Trim());
             DateTime fecha_entrada = dtpFechaEntrada.Value;
             DateTime fecha_u_entrada = dtpFechaUEntrada.Value;
@@ -69,15 +70,18 @@ namespace SistemaAlmacen
             Double importe = Double.Parse(tbImporte.Text.Trim());
 
             Factura f = new Factura();
-            //f.InsertarFactura(id_articulo, id_proveedor, cantidad, precio_unitario, total, fecha_entrada, fecha_u_entrada, concepto, importe);
+            try
+            {
+                f.InsertarFactura(numFactura, id_proveedor, fecha_entrada, fecha_u_entrada, concepto, importe);
+                MessageBox.Show("Factura agregada exitosamente!", "Agregar Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar la factura. " + ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             ControlCollection ctrls = (ControlCollection)this.Controls;
             Limpiar.VaciarCampos(ctrls);
-        }
-
-        private void btnAñadirArticulos_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)

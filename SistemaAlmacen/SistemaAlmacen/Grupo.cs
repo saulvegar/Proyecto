@@ -15,9 +15,8 @@ namespace SistemaAlmacen
         String nombre;
 
         //método para insertar un nuevo grupo
-        public void InsertarGrupo(int Id_Grupo, String Nombre)
+        public void InsertarGrupo(String Nombre)
         {
-            this.id_grupo = Id_Grupo;
             this.nombre = Nombre;
 
             Conexion cone = new Conexion();
@@ -26,7 +25,6 @@ namespace SistemaAlmacen
 
             SqlCommand procedimiento = new SqlCommand("InsertarGrupo", cone.conex);
             procedimiento.CommandType = CommandType.StoredProcedure;
-            procedimiento.Parameters.Add("@id_grupo", SqlDbType.Int).Value = id_grupo;
             procedimiento.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = nombre;
 
             try

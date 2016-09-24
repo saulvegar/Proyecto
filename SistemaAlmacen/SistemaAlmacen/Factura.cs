@@ -12,6 +12,7 @@ namespace SistemaAlmacen
     {
         //se definen las variables para cada uno de los campos que tiene la tabla factura
         int id_factura;
+        String numFactura;
         int id_proveedor;
         DateTime fecha_entrada;
         DateTime fecha_ultima_entrada;
@@ -19,10 +20,10 @@ namespace SistemaAlmacen
         Double importe;
 
         //método para insertar una nueva factura
-        public void InsertarFactura(int Id_Factura, int Id_Proveedor,  DateTime Fecha_entrada, DateTime Fecha_ultima_entrada, String Concepto, Double Importe)
+        public void InsertarFactura(String NumFactura, int Id_Proveedor,  DateTime Fecha_entrada, DateTime Fecha_ultima_entrada, String Concepto, Double Importe)
         {
-            this.id_factura =  Id_Factura;
             this.id_proveedor = Id_Proveedor;
+            this.numFactura = NumFactura;
             this.fecha_entrada = Fecha_entrada;
             this.fecha_ultima_entrada = Fecha_ultima_entrada;
             this.concepto = Concepto;
@@ -35,6 +36,7 @@ namespace SistemaAlmacen
             SqlCommand procedimiento = new SqlCommand("InsertarFactura", cone.conex);
             procedimiento.CommandType = CommandType.StoredProcedure;
             procedimiento.Parameters.Add("@id_factura", SqlDbType.Int).Value = id_factura;
+            procedimiento.Parameters.Add("@numeroFactura", SqlDbType.Int).Value = numFactura;
             procedimiento.Parameters.Add("@id_proveedor", SqlDbType.Int).Value = id_proveedor;
             procedimiento.Parameters.Add("@fecha_entrada", SqlDbType.NVarChar).Value = fecha_entrada;
             procedimiento.Parameters.Add("@fecha_ultima_entrada", SqlDbType.NVarChar).Value = fecha_ultima_entrada;
@@ -44,12 +46,10 @@ namespace SistemaAlmacen
             try
             {
                 procedimiento.ExecuteNonQuery();
-                MessageBox.Show("Factura agregada exitosamente!", "Agregar Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             catch (SqlException sqlex)
             {
-                MessageBox.Show("Error al agregar la nueva factura: " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Error al agregar la nueva factura: " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cone.Cerrar();
         }

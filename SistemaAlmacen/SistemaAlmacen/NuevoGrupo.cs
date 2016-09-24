@@ -15,5 +15,17 @@ namespace SistemaAlmacen
         {
             InitializeComponent();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            String nombre = tbNombre.Text.Trim();
+            Grupo g = new Grupo();
+            g.InsertarGrupo(nombre);
+        }
     }
 }

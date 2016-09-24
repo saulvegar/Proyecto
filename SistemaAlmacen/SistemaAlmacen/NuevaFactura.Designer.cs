@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaFactura));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,8 +57,11 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmDataGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminarFilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.tbPrecioUnitario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -67,13 +69,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tbIdArticulo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cmDataGrid = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.eliminarFilasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.cmDataGrid.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.cmDataGrid.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -264,29 +263,21 @@
             this.PrecioUnitario,
             this.Total});
             this.dgvArticulos.ContextMenuStrip = this.cmDataGrid;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvArticulos.Location = new System.Drawing.Point(6, 92);
             this.dgvArticulos.Name = "dgvArticulos";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArticulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvArticulos.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvArticulos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(448, 172);
             this.dgvArticulos.TabIndex = 22;
@@ -294,36 +285,51 @@
             // 
             // IdArticulo
             // 
-            dataGridViewCellStyle8.Format = "N0";
-            dataGridViewCellStyle8.NullValue = null;
-            this.IdArticulo.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.IdArticulo.DefaultCellStyle = dataGridViewCellStyle1;
             this.IdArticulo.HeaderText = "Id Artículo";
             this.IdArticulo.Name = "IdArticulo";
             // 
             // Cantidad
             // 
-            dataGridViewCellStyle9.Format = "N0";
-            dataGridViewCellStyle9.NullValue = null;
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle2;
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             // 
             // PrecioUnitario
             // 
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle3;
             this.PrecioUnitario.HeaderText = "Pcio. unit.";
             this.PrecioUnitario.Name = "PrecioUnitario";
             // 
             // Total
             // 
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = null;
-            this.Total.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
+            // 
+            // cmDataGrid
+            // 
+            this.cmDataGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarFilasToolStripMenuItem});
+            this.cmDataGrid.Name = "cmDataGrid";
+            this.cmDataGrid.Size = new System.Drawing.Size(142, 26);
+            // 
+            // eliminarFilasToolStripMenuItem
+            // 
+            this.eliminarFilasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarFilasToolStripMenuItem.Image")));
+            this.eliminarFilasToolStripMenuItem.Name = "eliminarFilasToolStripMenuItem";
+            this.eliminarFilasToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.eliminarFilasToolStripMenuItem.Text = "Eliminar filas";
+            this.eliminarFilasToolStripMenuItem.Click += new System.EventHandler(this.eliminarFilasToolStripMenuItem_Click);
             // 
             // label5
             // 
@@ -349,6 +355,22 @@
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Artículos:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnAñadir);
+            this.panel1.Controls.Add(this.tbPrecioUnitario);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.tbCantidad);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.tbIdArticulo);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.dgvArticulos);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(10, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(471, 276);
+            this.panel1.TabIndex = 30;
             // 
             // btnAñadir
             // 
@@ -424,37 +446,6 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Id Artículo:";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.tbPrecioUnitario);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.tbCantidad);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.tbIdArticulo);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.dgvArticulos);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(10, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(471, 276);
-            this.panel1.TabIndex = 30;
-            // 
-            // cmDataGrid
-            // 
-            this.cmDataGrid.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eliminarFilasToolStripMenuItem});
-            this.cmDataGrid.Name = "cmDataGrid";
-            this.cmDataGrid.Size = new System.Drawing.Size(142, 26);
-            // 
-            // eliminarFilasToolStripMenuItem
-            // 
-            this.eliminarFilasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eliminarFilasToolStripMenuItem.Image")));
-            this.eliminarFilasToolStripMenuItem.Name = "eliminarFilasToolStripMenuItem";
-            this.eliminarFilasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.eliminarFilasToolStripMenuItem.Text = "Eliminar filas";
-            this.eliminarFilasToolStripMenuItem.Click += new System.EventHandler(this.eliminarFilasToolStripMenuItem_Click);
-            // 
             // NuevaFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,15 +470,16 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "NuevaFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva factura";
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.cmDataGrid.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.cmDataGrid.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
