@@ -15,7 +15,7 @@ namespace SistemaAlmacen
         String table;
         String nombreProcedimiento;
         String textLabel;
-        public int id = 0;
+        private int id = 0;
 
         public int Id
         {

@@ -10,11 +10,41 @@ namespace SistemaAlmacen
 {
     class DetalleFactura
     {
-        int id_factura;
-        int id_articulo;
-        int cantidad;
-        Double precio_uni;
-        Double total;
+        private int id_factura;
+        private int id_articulo;
+        private int cantidad;
+        private Double precio_uni;
+        private Double total;
+
+        public int Id_factura
+        {
+            get { return id_factura; }
+            set { id_factura = value; }
+        }
+
+        public int Id_articulo
+        {
+            get { return id_articulo; }
+            set { id_articulo = value; }
+        }
+
+        public int Cantidad
+        {
+            get { return cantidad; }
+            set { cantidad = value; }
+        }
+
+        public Double Precio_uni
+        {
+            get { return precio_uni; }
+            set { precio_uni = value; }
+        }
+
+        public Double Total
+        {
+            get { return total; }
+            set { total = value; }
+        }
 
         public void InsertarDetalleFactura(int Id_Factura, int Id_Articulo, int Cantidad, Double Precio_Uni, Double Total)
         {

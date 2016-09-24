@@ -29,7 +29,6 @@ C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\Siste
 C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Departamentos.resources
 C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.NuevoProveedor.resources
 C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.Proveedores.resources
-C:\Users\Saul\Desktop\Proyecto\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.AgregarArticuloAFactura.resources
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\bin\Debug\SistemaAlmacen.exe.config
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.exe
 C:\Users\Saul\Desktop\SistemaAlmacen\SistemaAlmacen\obj\x86\Debug\SistemaAlmacen.pdb

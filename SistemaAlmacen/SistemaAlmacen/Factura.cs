@@ -109,5 +109,25 @@ namespace SistemaAlmacen
             }
             cone.Cerrar();
         }
+
+        public int ObtenerUltimoIdFactura(String NumFactura)
+        {
+            this.numFactura = NumFactura;
+
+            int id_fact;
+            Conexion c = new Conexion();
+            SqlCommand procedimiento = new SqlCommand("ObtenerIdFactura", c.conex);
+            procedimiento.CommandType = CommandType.StoredProcedure;
+            procedimiento.Parameters.Add("@numFactura", SqlDbType.Int).Value = numFactura;
+            SqlDataReader reader = new SqlDataReader();
+            reader = procedimiento.ExecuteReader();
+
+            while (reader.Read())
+            {
+                id_fact = int.Parse(reader.GetValue(0).ToString());
+            }
+
+            return id_fact;
+        }
     }
 }

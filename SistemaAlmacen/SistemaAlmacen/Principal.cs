@@ -70,5 +70,17 @@ namespace SistemaAlmacen
             Grupos g = new Grupos();
             g.Show();
         }
+
+        private void tsbFacturas_Click(object sender, EventArgs e)
+        {
+            Facturas f = new Facturas();
+            f.Show();
+        }
+
+        private void tsbArticulos_Click(object sender, EventArgs e)
+        {
+            Articulos a = new Articulos();
+            a.Show();
+        }
     }
 }

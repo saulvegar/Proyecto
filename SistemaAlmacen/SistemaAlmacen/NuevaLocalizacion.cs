@@ -16,14 +16,19 @@ namespace SistemaAlmacen
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            int Num_Cuviculo = int.Parse(tbNumCuviculo.Text.Trim());
+            Localizacion l = new Localizacion();
+            l.InsertarLocalizacion(Num_Cuviculo);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
+
+        
+        
     }
 }
