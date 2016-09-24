@@ -97,6 +97,7 @@
             this.cbUser.Name = "cbUser";
             this.cbUser.Size = new System.Drawing.Size(154, 28);
             this.cbUser.TabIndex = 4;
+            this.cbUser.Text = "Seleccionar";
             // 
             // btnIngresar
             // 
@@ -132,11 +133,11 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Image = global::SistemaAlmacen.Properties.Resources.eraser;
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(192, 202);
+            this.btnLimpiar.Location = new System.Drawing.Point(186, 202);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(92, 33);
+            this.btnLimpiar.Size = new System.Drawing.Size(98, 33);
             this.btnLimpiar.TabIndex = 8;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

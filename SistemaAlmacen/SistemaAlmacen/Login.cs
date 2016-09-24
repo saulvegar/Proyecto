@@ -47,11 +47,11 @@ namespace SistemaAlmacen
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             //Obtengo el texto del combo box de nombre de usuario y del textbox de contraseña
-            String nombreUsuario = cbUser.SelectedItem.ToString();
+            String nombreUsuario = cbUser.Text.Trim();
             String contraseña = txtContraseña.Text.Trim();
 
-            try{
-
+            try
+            {
                 //si el usuario y la contraseña son correctos muestra la patalla principal
                 if (Autentificar(nombreUsuario, contraseña) > 0)
                 {
@@ -78,8 +78,10 @@ namespace SistemaAlmacen
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            cbUser.Text = "";
-            txtContraseña.Clear();
+            //cbUser.Text = "";
+            //txtContraseña.Clear();
+            ControlCollection ctrls = (ControlCollection) this.Controls;
+            Limpiar.VaciarCampos(ctrls);
         }
 
         //este método comprueba si el usuario existe en la tabla y si la contraseña ingresada es correcta

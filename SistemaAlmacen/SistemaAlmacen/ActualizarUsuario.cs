@@ -32,10 +32,10 @@ namespace SistemaAlmacen
 
             while (r.Read())
             {
-                txtUsuario.Text = r.GetValue(1).ToString();
-                txtContrasena.Text = r.GetValue(2).ToString();
-                txtDepartamento.Text = r.GetValue(3).ToString();
-                txtCargo.Text = r.GetValue(4).ToString();
+                tbUsuario.Text = r.GetValue(1).ToString();
+                tbContrasena.Text = r.GetValue(2).ToString();
+                tbDepartamento.Text = r.GetValue(3).ToString();
+                tbCargo.Text = r.GetValue(4).ToString();
 
                 if (r.GetValue(5).ToString().Equals("a"))
                 {
@@ -51,10 +51,10 @@ namespace SistemaAlmacen
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {        
-            String usuario = txtUsuario.Text.Trim();
-            String contraseña = txtContrasena.Text.Trim();
-            String departamento = txtDepartamento.Text.Trim();
-            String cargo = txtCargo.Text.Trim();
+            String usuario = tbUsuario.Text.Trim();
+            String contraseña = tbContrasena.Text.Trim();
+            String departamento = tbDepartamento.Text.Trim();
+            String cargo = tbCargo.Text.Trim();
             char estatus = ' ';
 
             if (rbActivo.Checked == true)

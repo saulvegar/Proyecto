@@ -11,53 +11,69 @@ namespace SistemaAlmacen
 {
     public partial class NuevoArticulo : Form
     {
-        int id_grupo;
 
         public NuevoArticulo()
         {
             InitializeComponent();
         }
 
-        public NuevoArticulo(int Id_Grupo)
-        {
-            InitializeComponent();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int id_grupo = int.Parse(txtIdGrupo.Text.ToString().Trim());
-            String nombre = txtNombre.Text.ToString().Trim();
-            String descripcion = txtDescripcion.Text.ToString().Trim(); ;
+            int id_grupo = int.Parse(tbIdGrupo.Text.ToString().Trim());
+            String nombre = tbNombre.Text.ToString().Trim();
+            String descripcion = tbDescripcion.Text.ToString().Trim(); ;
             String unidad = cbUnidad.Text.ToString().Trim();
             //int id_local = int.Parse(txtIdLocal.Text.ToString().Trim());
 
             Articulo a = new Articulo();
             a.InsertarArticulo(id_grupo, nombre, descripcion, unidad);
-            this.Hide();
+            
+            ControlCollection ctrls = (ControlCollection) this.Controls;
+            Limpiar.VaciarCampos(ctrls);
+            
+            //this.Hide();
         }
 
-        private void txtIdGrupo_Click(object sender, EventArgs e)
+        private void tbIdGrupo_Click(object sender, EventArgs e)
         {
-            String sql = "select * from Grupo;";
-            String tituloForm = "Catálogo de grupos";
-            String textLabel = "Seleccione un grupo:";
-            Seleccionar s = new Seleccionar(sql, "Grupo", textLabel);
-            s.Text = tituloForm;
+            Seleccionar s = new Seleccionar("ListarGrupos", "Grupo", "Seleccione un grupo");
+            s.Text = "Catálogo de grupos";
 
             DialogResult res = s.ShowDialog();
 
             if (res == DialogResult.OK)
             {
-                txtIdGrupo.Text = s.id.ToString();
+                tbIdGrupo.Text = s.Id.ToString();
             }
-            //s.Show();
-
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void tbIdArticulo_Click(object sender, EventArgs e)
+        {
+            Seleccionar s = new Seleccionar("ListarArticulos", "Articulo", "Seleccione el artículo:");
+            s.Text = "Catálogo de artículos";
+
+            DialogResult res = s.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                tbIdArticulo.Text = s.Id.ToString();
+            }
+        }
+
+        private void tbIdLocalizacion_Click(object sender, EventArgs e)
+        {
+            Seleccionar s = new Seleccionar("ListarLocalizaciones", "Localizacion", "Seleccione la localización");
+            s.Text = "Catálogo de localizaciones";
+
+            DialogResult res = s.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                tbIdLocalizacion.Text = s.Id.ToString();
+            }
         }
     }
 }

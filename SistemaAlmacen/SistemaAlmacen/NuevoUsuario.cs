@@ -23,14 +23,17 @@ namespace SistemaAlmacen
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            String usuario = txtUsuario.Text.Trim();
-            String contraseña = txtContrasena.Text.Trim();
-            String dpto = txtDepartamento.Text.Trim();
-            String cargo = txtCargo.Text.Trim();
+            String usuario = tbUsuario.Text.Trim();
+            String contraseña = tbContrasena.Text.Trim();
+            String dpto = tbDepartamento.Text.Trim();
+            String cargo = tbCargo.Text.Trim();
 
             Usuario u = new Usuario();
             u.InsertarUsuario(usuario, contraseña, dpto, cargo);
-            this.Hide();
+
+            ControlCollection ctrls = (ControlCollection)this.Controls;
+            Limpiar.VaciarCampos(ctrls);
+            //this.Hide();
         }
     }
 }

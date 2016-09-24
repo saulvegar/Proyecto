@@ -17,7 +17,7 @@ namespace SistemaAlmacen
         String unidad;
         int cantidad;
         char estatus;
-        int id_local;
+        //int id_local;
 
         //método para insertar un nuevo articulo
         public void InsertarArticulo(int Id_Grupo, String Nombre, String Descripcion, String Unidad)
@@ -81,6 +81,7 @@ namespace SistemaAlmacen
             }
             catch (SqlException sqlex)
             {
+                MessageBox.Show("Algo salió mal. " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cone.Cerrar();
 
@@ -109,7 +110,7 @@ namespace SistemaAlmacen
             }
             catch (SqlException sqlex)
             {
-
+                MessageBox.Show("Algo salió mal. " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cone.Cerrar();
         }

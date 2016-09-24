@@ -58,5 +58,17 @@ namespace SistemaAlmacen
             Departamentos d = new Departamentos();
             d.Show();
         }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facturas f = new Facturas();
+            f.Show();
+        }
+
+        private void gruposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Grupos g = new Grupos();
+            g.Show();
+        }
     }
 }

@@ -8,18 +8,29 @@ namespace SistemaAlmacen
 {
     static class Limpiar
     {
-
-        //public void VaciarCampos()
-        //{
-        //    foreach (Control ctrl in this.Controls)
-        //    {
-        //        if (ctrl is TextBox)
-        //        {
-        //            TextBox text = ctrl as TextBox;
-        //            text.Clear();
-        //        }
-        //    }
-        //}
+        //Este método vacia todos los campos del formulario
+        public static void VaciarCampos(System.Windows.Forms.Control.ControlCollection Controls)
+        {
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox text = ctrl as TextBox;
+                    text.Clear();
+                }
+                if (ctrl is ComboBox)
+                {
+                    ComboBox text = ctrl as ComboBox;
+                    text.Text = "Seleccionar";
+                }
+                if (ctrl is DateTimePicker)
+                {
+                    DateTime fecha = DateTime.Now;
+                    DateTimePicker picker = ctrl as DateTimePicker;
+                    picker.Value = fecha;
+                }
+            }
+        }
 
         //este metodo borra todos los campos de un formulario siempre y cuando todos sean de tipo textbox
         public static void Vaciar(TextBox[] arreglo)
@@ -28,19 +39,6 @@ namespace SistemaAlmacen
             {
                 t.Clear();
             }
-        }
-
-        
-        public static List<T> ObtenerControles<T>(this Control container) where T : Control
-        {
-         List<T> controls = new List<T>();
-         foreach (Control c in container.Controls)
-         {
-           if (c is T)
-             controls.Add((T)c);
-           controls.AddRange(ObtenerControles<T>(c));
-         }
-        return controls;
-    }
+        }  
     }
 }

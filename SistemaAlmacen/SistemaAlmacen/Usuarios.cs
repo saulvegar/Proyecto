@@ -16,6 +16,7 @@ namespace SistemaAlmacen
         private static String tableName = "usuario";
         private String sqlString = "select * from " + tableName + ";";
         Conexion c = new Conexion();
+        String nombreProcedimiento = "ListarUsuarios";
 
         public Usuarios()
         {
@@ -24,7 +25,7 @@ namespace SistemaAlmacen
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            c.cargarDatos(dgvUsuarios, sqlString, tableName);
+            c.cargarDatos(dgvUsuarios, nombreProcedimiento, tableName);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

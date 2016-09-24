@@ -80,6 +80,12 @@
     <Compile Include="ActualizarGrupo.Designer.cs">
       <DependentUpon>ActualizarGrupo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActualizarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarProveedor.Designer.cs">
+      <DependentUpon>ActualizarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,10 +102,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>almacenDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="almacenUsers.Designer.cs">
+    <Compile Include="almacenFacturas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>almacenUsers.xsd</DependentUpon>
+      <DependentUpon>almacenFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="almacenGrupos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>almacenGrupos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="almacenProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>almacenProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="almacenUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>almacenUsuarios.xsd</DependentUpon>
     </Compile>
     <Compile Include="Articulo.cs" />
     <Compile Include="Articulos.cs">
@@ -121,6 +142,14 @@
     <Compile Include="Departamentos.Designer.cs">
       <DependentUpon>Departamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleFactura.cs" />
+    <Compile Include="Equipo.cs" />
+    <Compile Include="Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos.Designer.cs">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factura.cs" />
     <Compile Include="Facturas.cs">
       <SubType>Form</SubType>
@@ -128,6 +157,7 @@
     <Compile Include="Facturas.Designer.cs">
       <DependentUpon>Facturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grupo.cs" />
     <Compile Include="Grupos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +165,7 @@
       <DependentUpon>Grupos.cs</DependentUpon>
     </Compile>
     <Compile Include="Limpiar.cs" />
+    <Compile Include="Localizacion.cs" />
     <Compile Include="Localizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +208,12 @@
     <Compile Include="NuevoGrupo.Designer.cs">
       <DependentUpon>NuevoGrupo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoProveedor.Designer.cs">
+      <DependentUpon>NuevoProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +232,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor.cs" />
+    <Compile Include="Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Seleccionar.cs">
       <SubType>Form</SubType>
@@ -231,14 +275,26 @@
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Departamentos.resx">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos.resx">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturas.resx">
       <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevaFactura.resx">
       <DependentUpon>NuevaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaLocalizacion.resx">
+      <DependentUpon>NuevaLocalizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoArticulo.resx">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>
@@ -248,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoGrupo.resx">
       <DependentUpon>NuevoGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoProveedor.resx">
+      <DependentUpon>NuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
@@ -259,6 +318,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seleccionar.resx">
       <DependentUpon>Seleccionar.cs</DependentUpon>
@@ -288,16 +350,49 @@
     <None Include="almacenDataSet.xss">
       <DependentUpon>almacenDataSet.xsd</DependentUpon>
     </None>
-    <None Include="almacenUsers.xsc">
-      <DependentUpon>almacenUsers.xsd</DependentUpon>
+    <None Include="almacenFacturas.xsc">
+      <DependentUpon>almacenFacturas.xsd</DependentUpon>
     </None>
-    <None Include="almacenUsers.xsd">
+    <None Include="almacenFacturas.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>almacenUsers.Designer.cs</LastGenOutput>
+      <LastGenOutput>almacenFacturas.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="almacenUsers.xss">
-      <DependentUpon>almacenUsers.xsd</DependentUpon>
+    <None Include="almacenFacturas.xss">
+      <DependentUpon>almacenFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="almacenGrupos.xsc">
+      <DependentUpon>almacenGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="almacenGrupos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>almacenGrupos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="almacenGrupos.xss">
+      <DependentUpon>almacenGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="almacenProveedores.xsc">
+      <DependentUpon>almacenProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="almacenProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>almacenProveedores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="almacenProveedores.xss">
+      <DependentUpon>almacenProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="almacenUsuarios.xsc">
+      <DependentUpon>almacenUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="almacenUsuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>almacenUsuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="almacenUsuarios.xss">
+      <DependentUpon>almacenUsuarios.xsd</DependentUpon>
     </None>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

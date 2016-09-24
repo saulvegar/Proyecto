@@ -13,7 +13,7 @@ namespace SistemaAlmacen
     public partial class Articulos : Form
     {
         private static String tableName = "articulo";
-        private String sqlString = "select * from " + tableName + ";";
+        String nombreProcedimiento = "ListarArticulos";
         Conexion c = new Conexion();
 
         public Articulos()
@@ -23,12 +23,7 @@ namespace SistemaAlmacen
 
         private void Artículos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'almacenArticulos.Articulo' Puede moverla o quitarla según sea necesario.
-            this.articuloTableAdapter.Fill(this.almacenArticulos.Articulo);
-            // TODO: esta línea de código carga datos en la tabla 'almacenArticulos.Articulos' Puede moverla o quitarla según sea necesario.
-            //this.articulosTableAdapter.Fill(this.almacenArticulos.Articulos);
-            c.cargarDatos(dgvArticulos, sqlString, tableName);
-
+            c.cargarDatos(dgvArticulos, nombreProcedimiento, tableName);
         }
 
         private void nuevoArticuloToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,7 +128,7 @@ namespace SistemaAlmacen
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            c.cargarDatos(dgvArticulos, sqlString, tableName);
+            c.cargarDatos(dgvArticulos, nombreProcedimiento, tableName);
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)

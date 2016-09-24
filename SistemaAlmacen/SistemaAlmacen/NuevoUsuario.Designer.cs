@@ -34,10 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.txtDepartamento = new System.Windows.Forms.TextBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.tbCargo = new System.Windows.Forms.TextBox();
+            this.tbDepartamento = new System.Windows.Forms.TextBox();
+            this.tbContrasena = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -88,10 +88,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtCargo);
-            this.groupBox1.Controls.Add(this.txtDepartamento);
-            this.groupBox1.Controls.Add(this.txtContrasena);
-            this.groupBox1.Controls.Add(this.txtUsuario);
+            this.groupBox1.Controls.Add(this.tbCargo);
+            this.groupBox1.Controls.Add(this.tbDepartamento);
+            this.groupBox1.Controls.Add(this.tbContrasena);
+            this.groupBox1.Controls.Add(this.tbUsuario);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
@@ -105,37 +105,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registre los siguientes datos:";
             // 
-            // txtCargo
+            // tbCargo
             // 
-            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(179, 156);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(192, 24);
-            this.txtCargo.TabIndex = 8;
+            this.tbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCargo.Location = new System.Drawing.Point(179, 156);
+            this.tbCargo.Name = "tbCargo";
+            this.tbCargo.Size = new System.Drawing.Size(192, 24);
+            this.tbCargo.TabIndex = 8;
             // 
-            // txtDepartamento
+            // tbDepartamento
             // 
-            this.txtDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepartamento.Location = new System.Drawing.Point(179, 120);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(192, 24);
-            this.txtDepartamento.TabIndex = 7;
+            this.tbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDepartamento.Location = new System.Drawing.Point(179, 120);
+            this.tbDepartamento.Name = "tbDepartamento";
+            this.tbDepartamento.Size = new System.Drawing.Size(192, 24);
+            this.tbDepartamento.TabIndex = 7;
             // 
-            // txtContrasena
+            // tbContrasena
             // 
-            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(179, 83);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(192, 24);
-            this.txtContrasena.TabIndex = 6;
+            this.tbContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContrasena.Location = new System.Drawing.Point(179, 83);
+            this.tbContrasena.Name = "tbContrasena";
+            this.tbContrasena.Size = new System.Drawing.Size(192, 24);
+            this.tbContrasena.TabIndex = 6;
             // 
-            // txtUsuario
+            // tbUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(179, 46);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(192, 24);
-            this.txtUsuario.TabIndex = 5;
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(179, 46);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(192, 24);
+            this.tbUsuario.TabIndex = 5;
             // 
             // btnCancelar
             // 
@@ -204,10 +204,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.TextBox txtDepartamento;
-        private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox tbCargo;
+        private System.Windows.Forms.TextBox tbDepartamento;
+        private System.Windows.Forms.TextBox tbContrasena;
+        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;

@@ -87,7 +87,7 @@ namespace SistemaAlmacen
             }
             catch (SqlException sqlex)
             {
-
+                MessageBox.Show("Algo salió mal. " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cone.Cerrar();
 
@@ -115,7 +115,7 @@ namespace SistemaAlmacen
             }
             catch(SqlException sqlex)
             {
-                
+                MessageBox.Show("Error al cargar los datos del usuario. " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cone.Cerrar();
             return null;
@@ -143,7 +143,7 @@ namespace SistemaAlmacen
             }
             catch (SqlException sqlex)
             {
-
+                MessageBox.Show("Algo salió mal. " + sqlex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cone.Cerrar();
         }

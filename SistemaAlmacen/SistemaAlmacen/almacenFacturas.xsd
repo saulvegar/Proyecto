@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="almacenFacturas" targetNamespace="http://tempuri.org/almacenFacturas.xsd" xmlns:mstns="http://tempuri.org/almacenFacturas.xsd" xmlns="http://tempuri.org/almacenFacturas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=110.1.20.251;Initial Catalog=almacen;User ID=admin" IsAppSettingsProperty="false" Modifier="Assembly" Name="consolmante\eposerver.almacen.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturaConArticulosTableAdapter" GeneratorDataComponentClassName="FacturaConArticulosTableAdapter" Name="FacturaConArticulos" UserDataComponentName="FacturaConArticulosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="consolmante\eposerver.almacen.dbo" DbObjectName="almacen.dbo.FacturaConArticulos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Id Factura], [Id Articulo], Cantidad, [Precio unitario], Total, [Fecha entrada], [Fecha última entrada], Concepto, Importe, Articulo FROM dbo.FacturaConArticulos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id Factura" DataSetColumn="Id Factura" />
+              <Mapping SourceColumn="Id Articulo" DataSetColumn="Id Articulo" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Precio unitario" DataSetColumn="Precio unitario" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Fecha entrada" DataSetColumn="Fecha entrada" />
+              <Mapping SourceColumn="Fecha última entrada" DataSetColumn="Fecha última entrada" />
+              <Mapping SourceColumn="Concepto" DataSetColumn="Concepto" />
+              <Mapping SourceColumn="Importe" DataSetColumn="Importe" />
+              <Mapping SourceColumn="Articulo" DataSetColumn="Articulo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="almacenFacturas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="almacenFacturas" msprop:Generator_UserDSName="almacenFacturas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FacturaConArticulos" msprop:Generator_TableClassName="FacturaConArticulosDataTable" msprop:Generator_TableVarName="tableFacturaConArticulos" msprop:Generator_TablePropName="FacturaConArticulos" msprop:Generator_RowDeletingName="FacturaConArticulosRowDeleting" msprop:Generator_RowChangingName="FacturaConArticulosRowChanging" msprop:Generator_RowEvHandlerName="FacturaConArticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaConArticulosRowDeleted" msprop:Generator_UserTableName="FacturaConArticulos" msprop:Generator_RowChangedName="FacturaConArticulosRowChanged" msprop:Generator_RowEvArgName="FacturaConArticulosRowChangeEvent" msprop:Generator_RowClassName="FacturaConArticulosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_x0020_Factura" msprop:Generator_ColumnVarNameInTable="columnId_Factura" msprop:Generator_ColumnPropNameInRow="Id_Factura" msprop:Generator_ColumnPropNameInTable="Id_FacturaColumn" msprop:Generator_UserColumnName="Id Factura" type="xs:int" />
+              <xs:element name="Id_x0020_Articulo" msprop:Generator_ColumnVarNameInTable="columnId_Articulo" msprop:Generator_ColumnPropNameInRow="Id_Articulo" msprop:Generator_ColumnPropNameInTable="Id_ArticuloColumn" msprop:Generator_UserColumnName="Id Articulo" type="xs:int" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" />
+              <xs:element name="Precio_x0020_unitario" msprop:Generator_ColumnVarNameInTable="columnPrecio_unitario" msprop:Generator_ColumnPropNameInRow="Precio_unitario" msprop:Generator_ColumnPropNameInTable="Precio_unitarioColumn" msprop:Generator_UserColumnName="Precio unitario" type="xs:decimal" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" />
+              <xs:element name="Fecha_x0020_entrada" msprop:Generator_ColumnVarNameInTable="columnFecha_entrada" msprop:Generator_ColumnPropNameInRow="Fecha_entrada" msprop:Generator_ColumnPropNameInTable="Fecha_entradaColumn" msprop:Generator_UserColumnName="Fecha entrada" type="xs:dateTime" />
+              <xs:element name="Fecha_x0020_última_x0020_entrada" msprop:Generator_ColumnVarNameInTable="columnFecha_última_entrada" msprop:Generator_ColumnPropNameInRow="Fecha_última_entrada" msprop:Generator_ColumnPropNameInTable="Fecha_última_entradaColumn" msprop:Generator_UserColumnName="Fecha última entrada" type="xs:dateTime" />
+              <xs:element name="Concepto" msprop:Generator_ColumnVarNameInTable="columnConcepto" msprop:Generator_ColumnPropNameInRow="Concepto" msprop:Generator_ColumnPropNameInTable="ConceptoColumn" msprop:Generator_UserColumnName="Concepto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:decimal" />
+              <xs:element name="Articulo" msprop:Generator_ColumnVarNameInTable="columnArticulo" msprop:Generator_ColumnPropNameInRow="Articulo" msprop:Generator_ColumnPropNameInTable="ArticuloColumn" msprop:Generator_UserColumnName="Articulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FacturaConArticulos" />
+      <xs:field xpath="mstns:Id_x0020_Factura" />
+      <xs:field xpath="mstns:Id_x0020_Articulo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

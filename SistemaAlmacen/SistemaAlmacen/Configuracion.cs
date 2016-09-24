@@ -55,24 +55,12 @@ namespace SistemaAlmacen
             }
         }
 
-        private void Configuracion_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            //foreach (Control ctrl in this.Controls)
-            //{
-            //    if (ctrl is TextBox)
-            //    {
-            //        TextBox text = ctrl as TextBox;
-            //        text.Clear();
-            //    }
-            //}
+            ControlCollection ctrls = (ControlCollection) this.Controls;
 
-            TextBox[] arr = {txtServidor, txtBaseDatos, txtUsuario, txtContrasena};
-            Limpiar.Vaciar(arr);
+            //TextBox[] arr = {txtServidor, txtBaseDatos, txtUsuario, txtContrasena};
+            Limpiar.VaciarCampos(ctrls);
         }
 
         private void txtServidor_Validated(object sender, EventArgs e)

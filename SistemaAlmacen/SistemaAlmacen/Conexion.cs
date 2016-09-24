@@ -95,15 +95,18 @@ namespace SistemaAlmacen
 
         /*este metodo generico llena cualquier datagrid no importa en que formulario se encuentre con 
          * los datos de a consulta a la tabla que se le pasen*/
-        public void cargarDatos(DataGridView dgv, String sql, String table)
+        public void cargarDatos(DataGridView dgv, String Nombresp, String table)
         {
             Configurar();
             Conectar();
 
+            SqlCommand sp = new SqlCommand(Nombresp, conex);
+            sp.CommandType = CommandType.StoredProcedure;
+
             try
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conex);
-
+                //SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conex);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sp);
                 DataSet ds = new DataSet();
                 dataAdapter.Fill(ds, table);
                 dgv.DataSource = ds;

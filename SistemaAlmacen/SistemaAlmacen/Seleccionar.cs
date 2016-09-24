@@ -12,15 +12,23 @@ namespace SistemaAlmacen
     public partial class Seleccionar : Form
     {
         Conexion c = new Conexion();
-        String sql;
         String table;
+        String nombreProcedimiento;
         String textLabel;
-        public int id;
+        public int id = 0;
 
-        public Seleccionar(String Sql, String Table, String TextLabel)
+        public int Id
         {
-            this.sql = Sql;
+            get
+            {
+                return id;
+            }
+        }
+
+        public Seleccionar(String NombreProcedimiento, String Table, String TextLabel)
+        {
             this.table = Table;
+            this.nombreProcedimiento = NombreProcedimiento;
             this.textLabel = TextLabel;
             InitializeComponent();
         }
@@ -28,13 +36,19 @@ namespace SistemaAlmacen
         private void Seleccionar_Load(object sender, EventArgs e)
         {
             lblTexto.Text = textLabel;
-            c.cargarDatos(dgvSeleccionar, sql, table);
-            
+            c.cargarDatos(dgvSeleccionar, nombreProcedimiento, table);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            id = int.Parse(dgvSeleccionar.CurrentRow.Cells[0].Value.ToString());
+            try
+            {
+                id = int.Parse(dgvSeleccionar.CurrentRow.Cells[0].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

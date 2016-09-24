@@ -33,12 +33,12 @@ namespace SistemaAlmacen
 
             while (sdr.Read())
             {
-                txtId_Articulo.Text = sdr.GetValue(0).ToString();
-                txtNombre.Text = sdr.GetValue(2).ToString();
-                txtDescripcion.Text = sdr.GetValue(3).ToString();
+                tbIdLocalizacion.Text = sdr.GetValue(0).ToString();
+                tbNombre.Text = sdr.GetValue(2).ToString();
+                tbDescripcion.Text = sdr.GetValue(3).ToString();
                 cbUnidad.Text = sdr.GetValue(4).ToString();
-                txtId_Grupo.Text = sdr.GetValue(1).ToString();
-                txtCantidad.Text = sdr.GetValue(5).ToString();
+                tbId_Grupo.Text = sdr.GetValue(1).ToString();
+                tbCantidad.Text = sdr.GetValue(5).ToString();
 
                 if(sdr.GetValue(6).ToString().Trim().Equals("a"))
                 {
@@ -55,10 +55,10 @@ namespace SistemaAlmacen
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            String nombre = txtNombre.Text.Trim();
-            String descripcion = txtDescripcion.Text.Trim();
+            String nombre = tbNombre.Text.Trim();
+            String descripcion = tbDescripcion.Text.Trim();
             String unidad = cbUnidad.Text.Trim();
-            int cantidad = int.Parse(txtCantidad.Text.Trim());
+            int cantidad = int.Parse(tbCantidad.Text.Trim());
             char estatus = '\0';
 
             if(rbActivo.Checked)
